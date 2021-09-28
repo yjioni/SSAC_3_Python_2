@@ -1,13 +1,23 @@
 import csv
 
-f = open('C:/Users/oing9/Desktop/Yulia/SSAC_3/모두의 데이터 분석 with 파이썬/gender_12~17.csv',\
-    'r', encoding='cp949')
+from tkinter import *
+from tkinter import filedialog
+
+root = Tk()
+root.filename = filedialog.askopenfilename(
+                        title='choose csv file',
+                        initialdir='C:/Users/',
+                        filetypes=(('csv files', '*.csv'),
+                                    ('all files', '*.*'))
+                         )
+f = open(root.filename, 'r', encoding='cp949')
+
 data = csv.reader(f)
 
 header = next(data)
 
-# area = input('읍면동 입력>')
-area = '제주'
+area = input('읍면동 입력>')
+
 name = ''
 m = []
 f = []
