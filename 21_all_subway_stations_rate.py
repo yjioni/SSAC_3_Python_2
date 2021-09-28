@@ -1,7 +1,17 @@
 import csv
 import matplotlib.pyplot as plt
+from tkinter import *
+from tkinter import filedialog
 
-f = open('C:/Users/oing9/Downloads/t-money.csv')
+root = Tk()
+root.filename = filedialog.askopenfilename(
+                        title='choose csv file',
+                        initialdir='C:/Users/',
+                        filetypes=(('csv files', '*.csv'),
+                                    ('all files', '*.*'))
+                         )
+f = open(root.filename, 'r', encoding='cp949')
+
 data = csv.reader(f)
 header = next(data)
 
