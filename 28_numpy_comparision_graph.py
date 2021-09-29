@@ -16,7 +16,7 @@ f = open(root.filename, 'r', encoding='cp949')
 
 data = csv.reader(f)
 header = next(data)
-print(header)
+
 data = list(data)
 
 name = input('읍면동 입력 >>>')
