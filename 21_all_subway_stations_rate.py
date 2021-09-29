@@ -59,6 +59,9 @@ print(mx_stations)
 # 마이너스 부호 깨짐 해결
 plt.rc('font', family='Malgun Gothic')
 plt.rcParams['axes.unicode_minus']=False
+ 
+fig = plt.figure(figsize=(13,8)) ## 캔버스 생성
+fig.set_facecolor('white') ## 캔버스 배경색을 하얀색으로 설정
 
 explode = [0.02, 0]
 wedgeprops={'width': 0.7, 'edgecolor': 'w', 'linewidth': 2}
