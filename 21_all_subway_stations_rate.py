@@ -102,5 +102,4 @@ colors=['darkorange', 'orange', 'gold', 'yellow'],
 counterclock=True, explode=[0.02,0,0,0], wedgeprops=wedgeprops)
 
 plt.show()
-
-data.close()
+f.close()
